@@ -22,7 +22,7 @@ public class TouchInputPlayerController : MonoBehaviour
             {
                 //                                   Get x axis from touch input. 
                 float xAxis = transform.position.x + _touch.deltaPosition.x * dragSpeed;
-                float yAxis = transform.position.y;
+                float yAxis = transform.position.y; // + _touch.deltaPosition.y * dragSpeed; // for jumping
                 float zAxis = transform.position.z;
 
                 transform.position = new Vector3(xAxis, yAxis, zAxis);
